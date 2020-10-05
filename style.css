@@ -1,0 +1,183 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  height: 100vh;
+  font-family: sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+.timetable {
+  width: 100%;
+  height: 100%;
+  padding: .5rem 2rem 2rem 0;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 5% (1fr)[5];
+  -ms-grid-columns: 5% (1fr)[4];
+      grid-template: 5% repeat(5, 1fr)/5% repeat(4, 1fr);
+}
+
+.timetable__days {
+  -ms-grid-row: 1;
+  grid-area: 1 / 2 / 1 / -1;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  place-items: center;
+  font-size: 1.2rem;
+}
+
+.timetable__intervals {
+  -ms-grid-column: 1;
+  grid-area: 2 / 1 / -1 / 1;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: (1fr)[5];
+      grid-template-rows: repeat(5, 1fr);
+}
+
+.timetable__hour {
+  padding: .3em .1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.timetable__content {
+  grid-area: 2 / 2 / -1 / -1;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: (1fr)[5];
+  -ms-grid-columns: (1fr)[4];
+      grid-template: repeat(5, 1fr)/repeat(4, 1fr);
+}
+
+.subject {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: .5em .7em;
+  background-color: #fff;
+  border: 2px solid #000;
+  color: #000;
+  font-size: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  cursor: pointer;
+}
+
+.subject__hour, .subject__platform {
+  font-size: .9rem;
+}
+
+.subject__name {
+  font-size: 1.2rem;
+}
+
+.subject__type {
+  position: absolute;
+  right: .7em;
+  bottom: .5em;
+  text-transform: uppercase;
+}
+
+.subject--w {
+  background-color: #e25d5d;
+  border-color: #ad2a2a;
+  color: #ad2a2a;
+}
+
+.subject--l {
+  background-color: #52b5e4;
+  border-color: #307ca0;
+  color: #307ca0;
+}
+
+.subject--p {
+  background-color: #f173e7;
+  border-color: #a5459d;
+  color: #a5459d;
+}
+
+.subject--s {
+  background-color: #f0e374;
+  border-color: #a89f47;
+  color: #a89f47;
+}
+/*# sourceMappingURL=style.css.map */
