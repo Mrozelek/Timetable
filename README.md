@@ -1,3 +1,3 @@
 # Timetable
 Web implementation of timetable.  
-View the site at: https://mrozelek.github.io/Timetable/
+Check out the site at: https://mrozelek.github.io/Timetable/
